@@ -1,3 +1,4 @@
+import sys
 import os
 import pymongo
 import cv2
@@ -81,3 +82,6 @@ def Generate_Data(Name,Roll_no):
     cap.release()
     cv2.destroyAllWindows()
     return
+
+#Generate_Data(sys.argv[1], sys.argv[2])    
+sys.stdout.flush()
