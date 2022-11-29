@@ -6,6 +6,7 @@ import numpy as np
 import pandas as pd
 import warnings
 import tkinter as tk
+from Model_train import Model_Training
 warnings.filterwarnings("ignore")
 
 
@@ -82,5 +83,6 @@ def Generate_Data(Name, Roll_no):
     cv2.destroyAllWindows()
     return
 
-#Generate_Data(sys.argv[1], sys.argv[2])
-# sys.stdout.flush()
+Generate_Data(sys.argv[1], sys.argv[2])
+Model_Training()
+sys.stdout.flush()

@@ -6,10 +6,6 @@ const fs = require("fs");
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-app.get("/", (req, res) => {
-  res.sendFile(`${__dirname}/index.html`);
-});
-
 let port = process.env.PORT;
 if (port == null || port == "") {
   port = 3000;
@@ -20,13 +16,24 @@ app.listen(port, function () {
 
 app.post("/readPython", (req, res) => {
   var dataToSend;
-  const python = spawn("python", ["UI.py"]);
+  const python = spawn("python", ["Generate_Dataset.py", "abc", 1]);
   python.stdout.on("data", (data) => {
     console.error(`stderr: ${data}`);
   });
 
   python.on("exit", (code) => {
     console.log(`child process exited with ${code}, ${dataToSend}`);
-    res.sendFile(`${__dirname}/index.html`);
+  });
+});
+
+app.post("/readPython2", (req, res) => {
+  var dataToSend;
+  const python = spawn("python", ["Recognizer.py", 0]);
+  python.stdout.on("data", (data) => {
+    console.error(`stderr: ${data}`);
+  });
+
+  python.on("exit", (code) => {
+    console.log(`child process exited with ${code}, ${dataToSend}`);
   });
 });

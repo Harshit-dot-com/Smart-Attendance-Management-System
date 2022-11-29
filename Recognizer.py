@@ -1,3 +1,4 @@
+import sys
 import cv2
 from FaceDetection.face_detection import face
 from keras.models import load_model
@@ -123,3 +124,6 @@ def Recognition(subject):
     cv2.destroyAllWindows()
     data.export_csv(lecture) ###
     return
+
+Recognition(sys.argv[1])
+sys.stdout.flush()
