@@ -9,7 +9,6 @@ import tkinter as tk
 from Model_train import Model_Training
 warnings.filterwarnings("ignore")
 
-
 def Generate_Data(Name, Roll_no):
 
     def pushmongo(key, value):
