@@ -9,8 +9,7 @@ var connection = mysql.createConnection({
 });
 
 connection.connect(function(error){
-	if(error)
-	{
+	if(error){
 		throw error;
 	}
 	else
