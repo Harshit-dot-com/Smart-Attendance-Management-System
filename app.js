@@ -24,7 +24,6 @@ function deg2rad(deg) {
 
 
 
-
 app.use(session({
   secret : 'ourlittlesecret',
   cookie : {maxAge : 60000},
