@@ -9,7 +9,6 @@ from MongoDB.retrieve_pymongo_data import database
 
 import warnings
 warnings.filterwarnings("ignore")
-
 from tensorflow import ConfigProto, Session
 from keras.backend import set_session
 from keras.backend import clear_session
