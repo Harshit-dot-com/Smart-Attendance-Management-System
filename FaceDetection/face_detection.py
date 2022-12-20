@@ -1,5 +1,6 @@
 import cv2
 
+
 class face:
     def __init__(self):
         self.cascade=cv2.CascadeClassifier('FaceDetection/faces.xml')
