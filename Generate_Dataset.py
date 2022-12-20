@@ -76,8 +76,7 @@ def Generate_Data(Name, Roll_no):
         cv2.imshow('frame', frame)
         cv2.waitKey(100)
 
-        if ((pic_no > 30) | (0XFF == ord('a'))):
-            break
+        if ((pic_no > 30) | (0XFF == ord('a'))): break
 
     cap.release()
     cv2.destroyAllWindows()

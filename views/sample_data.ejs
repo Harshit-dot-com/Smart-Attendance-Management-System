@@ -1,0 +1,131 @@
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+        <title></title>
+    </head>
+    <body>
+        <div class="container">
+            <h1 class="text-center mt-3 mb-3"><%= title %></h1>
+
+
+                <% if(message.length > 0) { %>
+                <div class="alert alert-success">
+                    <%= message %>
+                </div>
+                <% } %>
+            <div class="card">
+                <div class="card-header">
+                    <div class="row">
+                        <div class="col">bt<%=Roll_no %></div>
+
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered">
+                            <tr>
+                                <th>Subject</th>
+
+                                <th>Day1</th>
+                                <th>Day2</th>
+                                <th>Day3</th>
+                                <th>Day4</th>
+                                <th>Day5</th>
+                                <th>Day6</th>
+                                <th>Day7</th>
+                                <th>Day8</th>
+                                <th>Day9</th>
+                                <th>Day10</th>
+                                <th>Day11</th>
+                                <th>Day12</th>
+                                <th>Day13</th>
+                                <th>Day14</th>
+                                <th>Day15</th>
+                                <th>Day16</th>
+                                <th>Day17</th>
+                                <th>Day18</th>
+                                <th>Day19</th>
+                                <th>Day20</th>
+                                <th>Day21</th>
+                                <th>Day22</th>
+                                <th>Day23</th>
+                                <th>Day24</th>
+                                <th>Day25</th>
+                                <th>Day26</th>
+                                <th>Day27</th>
+                                <th>Day28</th>
+                                <th>Day29</th>
+                                <th>Day30</th>
+                                <th>Percentage</th>
+                            </tr>
+                            <%
+                            if(sampleData.length > 0)
+                            {
+                                sampleData.forEach(function(data){
+                            %>
+                            <tr>
+                                <td><%= data.subject %></td>
+                                <td><%= data.day_1 %></td>
+                                <td><%= data.day_2 %></td>
+                                <td><%= data.day_3 %></td>
+                                <td><%= data.day_4 %></td>
+                                <td><%= data.day_5 %></td>
+                                <td><%= data.day_6 %></td>
+                                <td><%= data.day_7 %></td>
+                                <td><%= data.day_8 %></td>
+                                <td><%= data.day_9 %></td>
+                                <td><%= data.day_10 %></td>
+                                <td><%= data.day_11 %></td>
+                                <td><%= data.day_12 %></td>
+                                <td><%= data.day_13 %></td>
+                                <td><%= data.day_14 %></td>
+                                <td><%= data.day_15 %></td>
+                                <td><%= data.day_16 %></td>
+                                <td><%= data.day_17 %></td>
+                                <td><%= data.day_18 %></td>
+                                <td><%= data.day_19 %></td>
+                                <td><%= data.day_20 %></td>
+                                <td><%= data.day_21 %></td>
+                                <td><%= data.day_22 %></td>
+                                <td><%= data.day_23 %></td>
+                                <td><%= data.day_24 %></td>
+                                <td><%= data.day_25 %></td>
+                                <td><%= data.day_26 %></td>
+                                <td><%= data.day_27 %></td>
+                                <td><%= data.day_28 %></td>
+                                <td><%= data.day_29 %></td>
+                                <td><%= data.day_30 %></td>
+
+
+                            </tr>
+                            <%
+                                });
+                            }
+                            else
+                            {
+                            %>
+                            <tr>
+                                <td colspan="31">No Data Found</td>
+                            </tr>
+                            <%
+                            }
+                            %>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    </body>
+</html>
